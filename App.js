@@ -20,7 +20,12 @@ const App: () => React$Node = () => {
         onDownPress={() => console.warn('Under construction')}
         onMenuPress={() => console.warn('Under construction')}/>
        <Album uri={'http://36.media.tumblr.com/14e9a12cd4dca7a3c3c4fe178b607d27/tumblr_nlott6SmIh1ta3rfmo1_1280.jpg'}/>
-       <Details/>
+       <Details
+           title={'Track Title'}
+           album={'Album'}
+           add={() => console.warn('under construction')}
+           more={() => console.warn('under construction')}
+       />
     </SafeAreaView>
   );
 };

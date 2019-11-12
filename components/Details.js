@@ -8,19 +8,24 @@ import {
     Image
 } from 'react-native';
 
-const Details = () => {
+const Details = ({
+    album,
+    title,
+    add,
+    more
+}) => {
     return(
         <View style={styles.container}>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={add}>
                 <Image
                     source={{uri: 'add'}}
                     style={styles.icon}/>
             </TouchableOpacity>
             <View style={styles.textContainer}>
-                <Text style={styles.text}>Track Title</Text>
-                <Text style={styles.textAlbum}>Album</Text>
+                <Text style={styles.text}>{title}</Text>
+                <Text style={styles.textAlbum}>{album}</Text>
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={more}>
                 <Image
                     source={{uri: 'more'}}
                     style={styles.icon}/>
